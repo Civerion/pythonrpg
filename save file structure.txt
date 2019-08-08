@@ -1,0 +1,9 @@
+Name:
+Class: (Berserker = 0, Warrior = 1, Tank = 2) 
+Level:
+XP:
+Strength: 
+Defence:
+Health:
+Gold:
+
