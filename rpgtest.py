@@ -29,15 +29,28 @@ def game(chrName, chrClass, chrLvl, chrXp, chrStr, chrDef, chrMaxHp, chrGold):
     clear()
     levelFormula(chrLvl, chrXp)
     chrHp = chrMaxHp
-    print("@---------------------@)")
-    print(chrName + " the " + chrClass)
-    print("Level " + str(chrLvl))
-    print("XP " + str(chrXp) + "/" + str(maxXp))
-    print("Strength: " + str(chrStr))
-    print("Defence: " + str(chrDef))
-    print("Health: " + str(chrHp) + "/" + str(chrMaxHp))
-    print("Gold: " + str(chrGold))
-    print("@---------------------@)")
+    while playing = 0:
+        print("@---------------------@)")
+        print(chrName + " the " + chrClass)
+        print("Level " + str(chrLvl))
+        print("XP " + str(chrXp) + "/" + str(maxXp))
+        print("Strength: " + str(chrStr))
+        print("Defence: " + str(chrDef))
+        print("Health: " + str(chrHp) + "/" + str(chrMaxHp))
+        print("Gold: " + str(chrGold))
+        print("@---------------------@)")
+
+def monsterSelection(chrLvl):
+    global monsterName
+    global monsterLvl
+    global monsterDmg
+    global monsterDef
+    if (1 <= chrLvl <= 3):
+        monsterName = Goblin
+        monsterLvl = random.randint(1,3)
+        monsterDmg = monsterLvl * random.randint(1,2)
+        monsterDef = monsterLvl * random.randint(1,2)
+        monsterMaxHp = monsterLvl * random.randint(5, 8)
     
 # Setting up the level formula for the game and handles checking for a levelup
 def levelFormula(chrLvl, chrXp):
